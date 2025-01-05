@@ -1,8 +1,0 @@
-name: Output information
-on: issues
-jobs:
-  info:
-    runs-on: ubuntu-22.04
-    steps:
-      - name: Issue event happened
-        run: echo "${{toJson(github.event.issue.title)}}"
