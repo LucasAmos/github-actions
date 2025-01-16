@@ -19,7 +19,7 @@ jobs:
       - name: Install dependencies
         if: steps.cache.outputs.cache-hit != 'true'
         run: |
-          echo ${{steps.cache.outputs.cache-hit}}
+          echo "cache-hit: ${{steps.cache.outputs.cache-hit}}"
           npm ci
       - name: Lint code
         run: npm run lint
